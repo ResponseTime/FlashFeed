@@ -15,7 +15,7 @@ export default function Main() {
         "shares": '34'
     }]
     return (
-        <div className="w-full md:w-full border-l-[0.1rem] border-r-[0.1rem] border-gray-900">
+        <div className="w-full border-l-[0.1rem] border-r-[0.1rem] border-gray-900">
             <div className="top flex p-3  cursor-pointer">
                 <div className={clsx('foru w-1/2 flex justify-center font-bold rounded-lg p-2', {
                     "bg-blue-400": clicked === "for"
@@ -41,7 +41,6 @@ export default function Main() {
                         return <Post key={d} post={d} />
                     })
                 }
-
             </div>
         </div>
     )
