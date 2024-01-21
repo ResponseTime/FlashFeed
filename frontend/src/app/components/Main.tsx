@@ -2,9 +2,18 @@
 import React, { useState } from 'react'
 import PostIns from './PostIns'
 import clsx from 'clsx';
+import Post from './Post';
 
 export default function Main() {
     const [clicked, setClicked] = useState("for")
+    const data = [{
+        'title': "some title",
+        "image": "some img" || null,
+        "comments_N": "34",
+        "comments": ["som coms"],
+        "likes": "23",
+        "shares": '34'
+    }]
     return (
         <div className="w-full border-l-[0.1rem] border-r-[0.1rem] border-gray-900">
             <div className="top flex p-3  cursor-pointer">
@@ -26,6 +35,14 @@ export default function Main() {
             </div>
             <div className="h-[0.5px] w-full bg-gray-900"></div>
             <PostIns />
+            <div className="ps">
+                {
+                    data.map((d) => {
+                        return <Post key={d} post={d} />
+                    })
+                }
+
+            </div>
         </div>
     )
 }
