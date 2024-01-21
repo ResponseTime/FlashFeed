@@ -1,5 +1,6 @@
 'use client'
 import React from 'react'
+import Link from 'next/link';
 export default function Sidebar() {
     const tabs = ["Home", "Notifications", "Messages", "Lists", "Bookmarks", "Communities", "Profile", "More"]
     return (
@@ -10,10 +11,11 @@ export default function Sidebar() {
                 </div>
                 <div className="flex side justify-end">
                     <ul className='flex flex-col text-xl px-11'>
+
                         {tabs.map((tab) => {
-                            return <li key={tab} className="flex justify-start items-center gap-3 w-fit px-2 py-2 hover:rounded-full hover:bg-gray-900 hover:cursor-pointer font-bold my-2"> <span className="!text-3xl material-symbols-outlined">
+                            return <Link key={tab} href={tab === "Home" ? "/" : tab} className="flex justify-start items-center gap-3 w-fit px-2 py-2 hover:rounded-full hover:bg-gray-900 hover:cursor-pointer font-bold my-2"> <span className="!text-3xl material-symbols-outlined">
                                 {tab === "Profile" ? "person" : tab === "Messages" ? "business_messages" : tab}
-                            </span>{tab}</li>
+                            </span>{tab}</Link>
                         })}
                     </ul>
                 </div>
