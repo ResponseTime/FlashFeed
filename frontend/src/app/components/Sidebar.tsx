@@ -1,8 +1,10 @@
-'use client'
-import React from 'react'
+
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link';
 export default function Sidebar() {
+
     const tabs = ["Home", "Notifications", "Messages", "Lists", "Bookmarks", "Communities", "Profile", "More"]
+
     return (
         <>
             <div className="w-[67%]">

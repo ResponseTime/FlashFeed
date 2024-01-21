@@ -1,8 +1,9 @@
-'use client'
-import React from 'react'
+
+import React, { useEffect, useState } from 'react'
 import Item from './Item'
 
 export default function Right() {
+
     const now = [
         { title: "some2", "description": "some description", "posts": "32.5k" },
         { title: "some43", "description": "some description", "posts": "32.5k" },
