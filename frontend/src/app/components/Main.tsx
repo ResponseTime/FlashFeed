@@ -4,7 +4,7 @@ import PostIns from './PostIns'
 import clsx from 'clsx';
 
 export default function Main() {
-    const [clicked, setClicked] = useState("following")
+    const [clicked, setClicked] = useState("for")
     return (
         <div className="w-full border-l-[0.1rem] border-r-[0.1rem] border-gray-900">
             <div className="top flex p-3  cursor-pointer">
