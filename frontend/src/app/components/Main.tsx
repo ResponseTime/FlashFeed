@@ -7,12 +7,43 @@ import Post from './Post';
 export default function Main() {
     const [clicked, setClicked] = useState("for")
     const data = [{
-        'title': "some title",
-        "image": "some img" || null,
+        "user": {
+            "name": "some",
+            "pfp": "https://pbs.twimg.com/profile_images/1677682039577870338/_Y6A0TSD_normal.jpg"
+        },
+        "text": "some text",
+        "media": "some img",
         "comments_N": "34",
         "comments": ["som coms"],
         "likes": "23",
-        "shares": '34'
+        "shares": '34',
+        "time": "ago"
+    },
+    {
+        "user": {
+            "name": "some",
+            "pfp": "https://pbs.twimg.com/profile_images/1677682039577870338/_Y6A0TSD_normal.jpg"
+        },
+        "text": "some text",
+        "media": "some img",
+        "comments_N": "34",
+        "comments": ["som coms"],
+        "likes": "23",
+        "shares": '34',
+        "time": "ago"
+    },
+    {
+        "user": {
+            "name": "some",
+            "pfp": "https://pbs.twimg.com/profile_images/1677682039577870338/_Y6A0TSD_normal.jpg"
+        },
+        "text": "some text",
+        "media": "some img",
+        "comments_N": "34",
+        "comments": ["som coms"],
+        "likes": "23",
+        "shares": '34',
+        "time": "ago"
     }]
     return (
         <div className="w-full border-l-[0.1rem] border-r-[0.1rem] border-gray-900">
@@ -35,7 +66,7 @@ export default function Main() {
             </div>
             <div className="h-[0.5px] w-full bg-gray-900"></div>
             <PostIns />
-            <div className="ps">
+            <div className="ps flex flex-col justify-center p-5 space-y-3 ">
                 {
                     data.map((d) => {
                         return <Post key={d} post={d} />

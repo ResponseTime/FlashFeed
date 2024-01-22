@@ -15,7 +15,7 @@ export default function Right() {
 
     ]
     return (
-        <div className="w-full flex-col hidden lg:block ">
+        <div className="w-1/2 lg:w-full flex-col hidden lg:block ">
             <div className="search m-3">
                 <input type="text" placeholder="Search" className="hidden w-64  lg:block rounded-full px-3 py-2 bg-[#16181c]" />
             </div>
